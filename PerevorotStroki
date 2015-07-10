@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class ReString 
+{
+	public static void main(String[] args)
+	{
+		System.out.println("Введите строку:");
+		Scanner in = new Scanner(System.in);
+		StringBuilder stringOut = new StringBuilder();
+		String stringIn = in.nextLine();
+		for(int i=stringIn.length();i>0;i--)
+		{
+			String substr = stringIn.substring(i-1,i);
+			stringOut.append(substr);		
+		}
+		stringOut.toString();
+		System.out.println("Результат: ");
+		System.out.println(stringOut);
+		in.close();
+	}
+}
