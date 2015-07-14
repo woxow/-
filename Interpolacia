@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Interpolacia 
+{
+
+	public static void main(String[] args)
+	{
+		float x1;
+		float x2;
+		float x3;
+		float y1;
+		float y2;
+		float y3 = 0;
+		Scanner scn = new Scanner(System.in);
+		System.out.println("Введите x1");
+		x1 = scn.nextFloat();
+		System.out.println("Введите x2");
+		x2 = scn.nextFloat();
+		System.out.println("Введите x3");
+		x3 = scn.nextFloat();
+		System.out.println("Введите y1");
+		y1 = scn.nextFloat();
+		System.out.println("Введите y2");
+		y2 = scn.nextFloat();
+		scn.close();
+		y3 = y1 + (x3 - x1)/(x2 - x1)*(y2 - y1);
+		System.out.println(y3);
+	}
+	
+}
